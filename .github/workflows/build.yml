@@ -76,6 +76,7 @@ jobs:
         if: ${{inputs.multithreading == true}}
         working-directory: ImmortalWrt
         run: |
+          export TERM=xterm
           echo $TERM
           echo $TERMINFO
           make -j$(nproc) V=s
